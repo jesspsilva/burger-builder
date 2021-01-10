@@ -5,9 +5,11 @@
 
 # testing
 /coverage
+/scripts
 
 # production
 /build
+/config
 
 # misc
 .DS_Store
