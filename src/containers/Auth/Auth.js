@@ -74,6 +74,23 @@ class Auth extends Component {
         });
     }
 
+    handleErrorMessage = error => {
+        switch (error.message) {
+            case 'INVALID_PASSWORD':
+                return <p>The password is invalid</p>
+            case 'EMAIL_NOT_FOUND':
+                return <p>The email was not found</p>
+            case 'USER_DISABLED':
+                return <p>The account has been disabled</p>
+            case 'WEAK_PASSWORD : Password should be at least 6 characters':
+                return <p>Password should be at least 6 characters</p>
+            case 'EMAIL_EXISTS':
+                return <p>There is already an account associated with this email</p>
+            default:
+                return <p>Try again</p>
+        }
+    }
+
     render(){
         const formElements = [];
         for (let key in this.state.controls){
@@ -99,12 +116,10 @@ class Auth extends Component {
             form = <Spinner/>
         }
 
-        let errorMessage = null;
+        let errorMessage = null
 
         if (this.props.error) {
-            errorMessage = (
-                <p>{this.props.error.message}</p>
-            );
+            errorMessage = this.handleErrorMessage(this.props.error);
         }
 
         let authRedirect = null;
