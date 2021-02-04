@@ -6,6 +6,24 @@
     border: 1px solid #eee;
     padding: 10px;
     box-sizing: border-box;
+    background-color: #fcf6b1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.ContactData input,
+.ContactData select {
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: rgb(31, 31, 31);
+    font-size: 1em;
 }
 
 @media (min-width: 600px) {
