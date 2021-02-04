@@ -60,6 +60,8 @@ class BurgerBuilder extends Component {
             disabledInfo[key] = disabledInfo[key] <= 0;
         }
 
+        let maxIngredients = this.props.ingNumber === 6;
+
         let orderSummary = null;
         let burger = this.props.error ? <p style={{textAlign: 'center'}}>Ingredients can't be loaded!</p> : <Spinner />;
 
@@ -74,7 +76,9 @@ class BurgerBuilder extends Component {
                         purchasable={this.updatePurchaseState(this.props.ingredients)}
                         ordered={this.purchaseHandler}
                         isAuth={this.props.isAuthenticated}
-                        price={this.props.totalPrice}/>
+                        price={this.props.totalPrice}
+                        maxIngredients={maxIngredients}
+                        />
                 </Aux>
             )
 
@@ -105,7 +109,8 @@ const mapStateToProps = state => {
         ingredients: state.burgerBuilder.ingredients,
         totalPrice: state.burgerBuilder.totalPrice,
         error: state.burgerBuilder.error,
-        isAuthenticated: state.auth.token !== null
+        isAuthenticated: state.auth.token !== null,
+        ingNumber: state.burgerBuilder.ingredientsNumber
     };
 };
 
