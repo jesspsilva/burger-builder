@@ -1,8 +1,14 @@
 .Order {
-    width: 80%;
-    border: 1px solid #eee;
+    width: 40%;
+    background-color: #fcf6b1;
+    border: 1px solid  #fcf6b1;
     box-shadow: 0 2px 3px #ccc;
     padding: 10px;
     margin: 10px auto;
     box-sizing: border-box;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
