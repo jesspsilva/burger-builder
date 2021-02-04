@@ -50,7 +50,8 @@ const setIngredients = (state, action) => {
         },
         totalPrice: 4,
         error: false,
-        building: false
+        building: false,
+        ingredientsNumber: 0
     })
 }
 
