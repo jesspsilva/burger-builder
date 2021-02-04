@@ -77,17 +77,17 @@ class Auth extends Component {
     handleErrorMessage = error => {
         switch (error.message) {
             case 'INVALID_PASSWORD':
-                return <p>The password is invalid</p>
+                return <p className={classes.Error}>The password is invalid</p>
             case 'EMAIL_NOT_FOUND':
-                return <p>The email was not found</p>
+                return <p className={classes.Error}>The email was not found</p>
             case 'USER_DISABLED':
-                return <p>The account has been disabled</p>
+                return <p className={classes.Error}>The account has been disabled</p>
             case 'WEAK_PASSWORD : Password should be at least 6 characters':
-                return <p>Password should be at least 6 characters</p>
+                return <p className={classes.Error}>Password should be at least 6 characters</p>
             case 'EMAIL_EXISTS':
-                return <p>There is already an account associated with this email</p>
+                return <p className={classes.Error}>There is already an account associated with this email</p>
             default:
-                return <p>Try again</p>
+                return <p className={classes.Error}>Try again</p>
         }
     }
 
