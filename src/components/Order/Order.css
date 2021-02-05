@@ -1,5 +1,5 @@
 .Order {
-    width: 50%;
+    width: 90%;
     background-color: #fcf6b1;
     border: 1px solid  #fcf6b1;
     box-shadow: 0 2px 3px #ccc;
@@ -11,4 +11,22 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+.Ingredients {
+    text-transform: capitalize;
+    display: block;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+@media (min-width: 600px) {
+    .Order {
+        width: 50%;
+    }
+    .Ingredients {
+        display: inline-block;
+        margin: 0 8px;
+    }
 }

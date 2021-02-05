@@ -14,7 +14,7 @@ const order = (props) => {
     const ingredientOutput = ingredients.map(ing => {
         return <span 
         key={ing.name} 
-        style={{textTransform: 'capitalize', display: 'inline-block', margin: '0 8px', border: '1px solid #ccc', padding: '5px'}}
+        className={classes.Ingredients}
         >
             {ing.name} ({ing.amount})
         </span>
